@@ -6,18 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decrypt me!</title>
     <script src="decrypt.js" defer></script>
-    <link rel="stylesheet" type="text/html" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div>
-    <input class="textInput" type="text" placeholder="Plaintext">
-    <div class="textOutput"></div>
-    <button class="encryptBtn">Krypter</button>
-    </div>  
-    <div>
-    <input class="cipherinput" type="text" placeholder="Cipher">
-    <button class="decryptBtn">Dekrypter</button>
+    <h2>Caesar Cipher</h2>
+    <div class="Caesar">
+        <div class="inputArea">
+            <input class="textInput" type="text" placeholder="Plaintext">
+            <div class="textOutput"></div>
+            <button class="CaesarEncryptBtn">Krypter</button>
+        </div>  
+        <div class="inputArea">
+            <input class="cipherInput" type="text" placeholder="Cipher">
+            <div class="cipherOutput"></div>
+            <button class="CaesarDecryptBtn">Dekrypter</button>
+        </div>
     </div>
-
+    <h2>Viginère Cipher</h2>
+    <div class="Viginère">
+        <div class="inputArea">
+            <input class="textInput vigiInputEncrypt" type="text" placeholder="Plaintext">
+            <input class="keyInput encryptKey" type="text" placeholder="Key">
+            <div class="textOutput vigiTextOutput"></div>
+            <button class="VigiEncryptBtn">Krypter</button>
+        </div>  
+        <div class="inputArea">
+            <input class="cipherInput vigiInputDecrypt" type="text" placeholder="Cipher">
+            <input class="keyInput decryptKey" type="text" placeholder="Key">
+            <div class="cipherOutput vigiCipherOutput"></div>
+            <button class="VigiDecryptBtn">Dekrypter</button>
+        </div>
+    </div>
 </body>
 </html>

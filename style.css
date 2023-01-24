@@ -1,0 +1,44 @@
+body {
+    background-color: whitesmoke;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 25px;
+}
+
+.Caesar,
+.Viginère {
+    display: flex;
+}
+
+.textOutput, .cipherOutput {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    padding: 5px;
+    margin: 5px 0px;
+}
+
+.inputArea {
+    margin: 15px 15px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputArea .cipherInput,
+.inputArea .cipherOutput,
+.inputArea .textInput,
+.inputArea .textOutput {
+    width: 100%;
+}
+
+.keyInput {
+    align-self: start;
+    margin: 10px 0px
+}
+
+.error {
+    border: 0.5px solid red;
+}
