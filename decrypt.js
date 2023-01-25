@@ -17,6 +17,8 @@ const cipherInput = document.querySelector('.cipherInput')
 
 const alfA = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
+//Event listener
+
 caesarEncrypt.addEventListener('click', ()=> {
     Caesar.encrypt(textInput.value);
 })
@@ -45,25 +47,7 @@ vigiDecrypt.addEventListener('click', ()=> {
     Vigi.decrypt($('.vigiInputDecrypt').value, decryptKey.value)
 })
 
-//2 array løsning - old
-
-/* const Caesar = {
-    encrypt(letters) {
-        let arrayOfLetters = letters.replace(/\s+/g, '').toLowerCase().split('');
-        let shiftThis = arrayOfLetters.map(letter => {
-            return alfB[alfA.indexOf(letter)];
-        })
-        $('.textOutput').innerText = shiftThis.join('');
-    },
-
-    decrypt(cipher) {
-        let arrayOfLetters = cipher.replace(/\s+/g, '').toLowerCase().split('');
-        let shiftThis = arrayOfLetters.map(cipher => {
-            return alfA[alfB.indexOf(cipher)]
-        })
-        $('.textOutput').innerText = shiftThis.join('');
-    }
-} */
+// Caesar cipher
 
 const Caesar = {
     encrypt(letters) {
@@ -105,14 +89,7 @@ const Caesar = {
     }
 }
 
-/*
-    For hver bogstav i arrayet
-        find tal fra key indexOf
-        vælg bogstav der er (key char index) frem
-        push den til array
-
-
-*/
+// Viginere cipher
 
 const Vigi = {
     encrypt(letters, key) {
@@ -167,54 +144,3 @@ const Vigi = {
         $('.vigiCipherOutput').innerText = result.join('');
     }
 }
-
-
-
-//go back
-
-/* if 
-    tallet er højere end array længde
-        index + 3 minus array.længde
-
-    tallet er mindre end nul
-        index 
-*/
-
-/* let gæt = ord.split('');
-
-let toBeDecrypt = []
-
-gæt.forEach(letter => {
-    toBeDecrypt.push(numbers.indexOf(letter))
-})
-
-
-function decrypt(value) {
-    let result = toBeDecrypt.map(number => {
-        if(number - value < 0) {
-            return 
-        } else {
-            return number - value;
-        }
-    })
-    console.log(result)
-}
- */
-
-        /*      if((alfA.indexOf(letter) % 25) == 0) {
-                return alf[alf.indexOf(letter) % 25 + 2]
-            } */
-
-
-        /* let shiftThis = arrayOfLetters.forEach(letter => {
-            alf.forEach((char, index) => {
-                if(char.toLowerCase() === letter.toLowerCase()) {
-                    if(index + 3 >= alf.length) {
-                        result.push((index + 3 - alf.length))
-                    }
-                    result.push((index + 3));
-                }
-            })
-        })
-
-        result */
